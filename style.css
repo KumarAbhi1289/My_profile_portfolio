@@ -1,0 +1,694 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #111111;
+}
+
+/* nav-bar */
+
+header{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 100vw;
+    height: 10vh;
+    border-bottom: 1px solid #eaeaeb;
+    background: #222222;
+    position: sticky;
+    top: 0%;
+    z-index: 20;
+}
+header .logo img{
+    height: 10vh;
+    border-radius: 50%; 
+    cursor: pointer; 
+}
+header nav{
+    display: block;
+    line-height: 10vh;
+}
+header nav input, label{
+    display: none;
+}
+header nav .menu{
+    font-size: 1.5rem;
+}
+header nav .menu a{
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+header nav .menu a.active{
+    background: #FFE4E1;
+    color: #C71585;
+}
+header nav .menu a:hover{
+    background: #FFE4E1;
+    color: #C71585;
+}
+
+/* banner */
+
+section .banner{
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 89.5vh;
+    background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.7), 
+    rgba(255, 255, 255, 0.0)), 
+    url(img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section .banner h1{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    font-size: 5rem;
+    color: #30CFD0;
+    text-shadow: 2px 3px 5px #000;
+}
+section .banner h1::after{
+    content: '';
+    animation: heading_change 10s infinite;
+}
+@keyframes heading_change{
+    0%{
+        content: 'Web Developer';
+    }
+    25%{
+        content: 'Web Designer';
+    }
+    50%{
+        content: 'Freelencer';
+    }
+    75%{
+        content: 'Photographer';
+    }
+    100%{
+        content: 'Web Developer';
+    }
+    
+}
+
+section .banner p{
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    font-size: 1.3rem;
+    color: #77f5c58f;
+    text-shadow: 2px 3px 5px #000;
+    max-width: 40%;
+}
+section .banner p::after{
+    content: '';
+    animation: para_change 10s infinite;
+}
+@keyframes para_change{
+    0%{
+        content: '"A web developer is a programmer who specializes in, or is specifically engaged in, the development of World Wide Web applications using a client–server model."';
+    }
+    25%{
+        content: '"Web design refers to the design of websites that are displayed on the internet. It usually refers to the user experience aspects of website development rather than software development. ... A web designer works on the appearance, layout, and, in some cases, content of a website."';
+    }
+    50%{
+        content: '"A person who works as a writer, designer, performer, or the like, selling work or services by the hour, day, job, etc., rather than working on a regular salary basis for one employer."';
+    }
+    75%{
+        content: '"Photography is the art, application and practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film."';
+    }
+    100%{
+        content: '"A web developer is a programmer who specializes in, or is specifically engaged in, the development of World Wide Web applications using a client–server model."';
+    }
+}
+
+/* profile */
+section .profile{
+    width: 100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/photo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 2rem;
+}
+
+section .profile .profile_bg{
+    width: 20rem;
+    margin: 0 auto;
+}
+section .profile h1{
+    font-size: 5rem;
+    color: #00FFFF;
+    text-shadow: 2px 3px 5px #f00;
+    padding: 2rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+section .profile h2{
+    font-size: 3rem;
+    color: #A3E4D7;
+    text-shadow:  1px 1px 2.5px rgb(142, 230, 71);
+    padding-top: 2rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+section .profile h4{
+    font-size: 1.5rem;
+    color: #A3E4D7;
+    text-shadow:  1px 1px 2.5px rgb(142, 230, 71);
+    text-align: center;
+    box-sizing: border-box;
+}
+section .profile .profile_bg .my_profile{
+    background-image: url(img/profile.jpg);
+    width: 100%;
+    height: 20rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 1px 10px rgb(142, 230, 71);
+}
+section .profile .profile_bg .my_profile:hover{
+    box-shadow: 0 1px 20px rgb(142, 230, 71);
+}
+
+
+/* skills */
+
+section .skill{
+    width: 100vw;
+    height: 50vh;
+}
+section .skill .skill_bg{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/skills.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    text-shadow: 2px 3px 5px #f00;
+    background-attachment: fixed;
+}
+.container{
+    width: 100%;
+    color: #fff;
+    background: #111111;
+    display: flex;
+    flex-direction: column;
+}
+.container h3{
+    text-align: center;
+    padding-bottom: 0.5rem;
+    color: #30CFD0;
+}
+.container .C, .Python, .html, .CSS, .JavaScript, .PHP, .Mysql, .Photography{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.container .bg{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+} 
+.container .content{
+    width: 80vw;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    text-align: justify;
+}
+.container .content span{
+    font-weight: bold;
+}
+.container div:nth-child(2n+1) .content{
+    display: block;
+}
+.container div:nth-child(2n){
+    display: flex;
+    flex-direction: row-reverse;
+}
+.container div:nth-child(2n) .bg{
+}
+.container div:nth-child(2n) .content{
+    display: block;
+}
+
+.container div:nth-child(1) .bg{
+    background-image: url(img/C.png);
+    background-position: center;
+    background-size: cover;
+}
+.container div:nth-child(2) .bg{
+    background-image: url(img/python.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container div:nth-child(3) .bg{
+    background-image: url(img/html.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container div:nth-child(4) .bg{
+    background-image: url(img/css.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container div:nth-child(5) .bg{
+    background-image: url(img/js_logo.png);
+    background-position: center;
+    background-size: cover;
+}
+.container div:nth-child(6) .bg{
+    background-image: url(img/php.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container div:nth-child(7) .bg{
+    background-image: url(img/Mysql.png);
+    background-position: center;
+    background-size: cover;
+}
+.container div:nth-child(8) .bg{
+    background-image: url(img/photo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container div:nth-child(1):hover .bg{
+    box-shadow: 0 0 20px #00FFFF;
+}
+.container div:nth-child(2):hover .bg{
+    box-shadow: 0 0 20px #00FFFF;
+}
+.container div:nth-child(3):hover .bg{
+    box-shadow: 0 0 20px #00FFFF;
+}
+.container div:nth-child(4):hover .bg{
+    box-shadow: 0 0 20px #00FFFF;
+}
+.container div:nth-child(5):hover .bg{
+    box-shadow: 0 0 20px #00FFFF;
+}
+.container div:nth-child(6):hover .bg{
+    box-shadow: 0 0 20px #00FFFF;
+}
+.container div:nth-child(7):hover .bg{
+    box-shadow: 0 0 20px #00FFFF;
+}
+.container div:nth-child(8):hover .bg{
+    box-shadow: 0 0 20px #00FFFF;
+}
+
+
+/* Dream */
+section .dream{
+    width: 100vw;
+    height: 50vh;
+}
+section .dream .dream_bg{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/dream.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    text-shadow: 2px 3px 5px #f00;
+    background-attachment: fixed;
+    text-transform: uppercase;
+}
+.my_dream{
+    width: 95%;
+    display: block;
+    margin: auto;
+    /* background: greenyellow; */
+}
+.my_dream h2{
+    font-size: 4rem;
+    padding-left: 1rem;
+    color: #fff;
+}
+.my_dream h2:first-child{
+    padding-top: 2rem;
+}
+.my_dream .trekking{
+    width: 100vw;
+    height: 80vh;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.my_dream .trekking .background{
+    background-image: url(img/trekking.jpg);
+    width: 40%;
+    height: 80%;
+    background-size: cover;
+    position: relative;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+}
+.my_dream .trekking::before{
+    content: '';
+    background-image: url(img/trekking.jpg);
+    width: 90%;
+    height: 80vh;
+    background-size: cover;
+    filter: blur(8px);
+    position: absolute;
+}
+.my_dream .paragliding{
+    width: 100vw;
+    height: 80vh;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.my_dream .paragliding .background{
+    background-image: url(img/paragliding.jpg);
+    width: 40%;
+    height: 80%;
+    background-size: cover;
+    position: relative;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+}
+.my_dream .paragliding::before{
+    content: 'HII';
+    background-image: url(img/paragliding.jpg);
+    width: 90%;
+    height: 80vh;
+    background-size: cover;
+    filter: blur(8px);
+    position: absolute;
+}
+.my_dream .fsd{
+    width: 100vw;
+    height: 80vh;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.my_dream .fsd .background{
+    background-image: url(img/fsd.jpg);
+    width: 40%;
+    height: 80%;
+    background-size: cover;
+    position: relative;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+}
+.my_dream .fsd::before{
+    content: 'HII';
+    background-image: url(img/fsd.jpg);
+    width: 90%;
+    height: 80vh;
+    background-size: cover;
+    filter: blur(8px);
+    position: absolute;
+}
+
+/* footer */
+footer{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    text-align: center;
+}
+footer .contact ul{
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    border-bottom: 1px solid grey;
+}
+footer .contact{
+    padding: 1rem;
+}
+footer .contact ul li{
+    list-style: none;
+    padding: 1rem;
+}
+footer .contact ul li a{
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+footer .contact ul li a span{ 
+    padding: 0.5rem;
+}
+
+footer .contact ul li a:hover{
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+footer .contact ul :nth-child(1) a{
+    color: #3b5999;
+}
+footer .contact ul :nth-child(2) a{
+    color: #e4405f;
+}
+footer .contact ul :nth-child(3) a{
+    color: #0077B5;
+}
+
+footer .copyright{
+    padding: 1rem;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1024px){
+    html{
+        font-size: 70%;
+    }
+    section .banner{
+        height: 40vh;
+    }
+    section .hobbies, section .dream, section .skill{
+        height: 30vh;
+    }
+    /* section .profile .profile_bg .my_profile{
+        height: 15vh;
+    } */
+    .container {
+        display: block;
+    }
+    .my_dream .trekking .background{
+
+        width: 60%;
+        height: 70%;
+    }
+    .my_dream .trekking{
+        height: 50vh;
+    }
+    .my_dream .trekking::before{
+        content: '';
+        width: 90%;
+        height: 50vh;
+    }
+    .my_dream .paragliding .background{
+
+        width: 60%;
+        height: 70%;
+    }
+    .my_dream .paragliding{
+        height: 50vh;
+    }
+    .my_dream .paragliding::before{
+        content: '';
+        width: 90%;
+        height: 50vh;
+    }
+    .my_dream .fsd .background{
+
+        width: 60%;
+        height: 70%;
+    }
+    .my_dream .fsd{
+        height: 50vh;
+    }
+    .my_dream .fsd::before{
+        content: '';
+        width: 90%;
+        height: 50vh;
+    }
+}
+@media (max-width: 768px){
+    html{
+        font-size: 62.5%;
+    }
+    header nav .menu{
+        width: 100%;
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 2rem;
+    }
+    header nav label{
+        display: inline;
+        font-size: 4rem;
+        color: #fff;
+    }
+    header nav .menu a{
+        display: block;
+        border-bottom: 1px solid #eaeaeb;
+    }
+    #check:checked ~ .menu{
+        display: block;
+        top: 10.15vh;
+        background: rgba(22, 22, 22, 0.6);
+        z-index: 10;
+    }
+    section .banner{
+        height: 40vh;
+    }
+    section .banner h1{
+        font-size: 4rem;
+    }
+    .container{
+        font-size: 1.4rem;
+    }
+    .container .bg{
+        width: 18rem;
+        height: 18rem;
+    }
+    .container h3{
+        font-size: 2rem;
+        padding: 1rem;
+    }
+    .container .C, .Python, .html, .CSS, .JavaScript, .PHP, .Mysql, .Photography{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container div:nth-child(2n) p{
+        flex-direction: column;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid grey;
+    }
+    .container div:first-child .bg{
+        margin-top: 2rem;
+    }
+    .container div:nth-child(2n){
+        flex-direction: column;
+    }
+    .container .content{
+        width: 100vw;
+        padding: 3rem;
+        text-align: justify;
+    }
+    
+    
+}
+
+@media (max-width: 640px){
+    html{
+        font-size: 55%;
+    }
+    section .banner h1{
+        top: 40%;
+        left: 5%;
+        font-size: 3.5rem;
+    }
+    section .banner p{
+        position: absolute;
+        top: 54%;
+        left: 5%;
+        font-size: 1.3rem;
+}
+@media (max-width: 510px){
+    html{
+        font-size: 50%;
+    }
+    section .banner{
+        height: 30vh;
+    }
+    .my_dream .trekking .background{
+
+        width: 60%;
+        height: 65%;
+    }
+    .my_dream .trekking{
+        height: 35vh;
+    }
+    .my_dream .trekking::before{
+        content: '';
+        width: 90%;
+        height: 30vh;
+    }
+    .my_dream .paragliding .background{
+
+        width: 60%;
+        height: 65%;
+    }
+    .my_dream .paragliding{
+        height: 35vh;
+    }
+    .my_dream .paragliding::before{
+        content: '';
+        width: 90%;
+        height: 30vh;
+    }
+    .my_dream .fsd .background{
+
+        width: 60%;
+        height: 65%;
+    }
+    .my_dream .fsd{
+        height: 35vh;
+    }
+    .my_dream .fsd::before{
+        content: '';
+        width: 90%;
+        height: 30vh;
+    }
+}
+@media (max-width: 480px){
+    html{
+        font-size: 35%;
+    }
+    section .banner{
+        height: 30vh;
+    }
+    section .hobbies, section .dream, section .skill{
+        height: 20vh;
+    }
+}
+@media (max-width: 360px){
+    html{
+        font-size: 40%;
+    }
+    section .banner{
+        height: 30vh;
+    }
+
+}
+@media (max-width: 280px){
+    html{
+        font-size: 25%;
+    }
+    section .banner{
+        height: 25vh;
+    }
+
+}
